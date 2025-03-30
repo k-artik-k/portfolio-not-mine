@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D Aditya Varma - Portfolio</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #eef4f7;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .profile-image {
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+.profile-image:hover {
+    filter: grayscale(0%);
+}
+        .profile-image img {
+    width: 150px; /* Adjust size */
+    height: 150px; 
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures image fits properly */
+    border: 3px solid #333; /* Optional border */
+}
+
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode .section {
+            background: #333;
+            color: white;
+        }
+        .skills-container, .projects-container {
+            display: flex;
+            gap: 20px;
+        }
+        .skills-box, .projects-box {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode .skills-box, .dark-mode .projects-box {
+            background: #444;
+            color: white;
+        }
+        .toggle-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            padding: 10px 15px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .dark-mode .toggle-switch {
+            background: white;
+            color: black;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            color: black;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .dark-mode .footer {
+            background: #444;
+            color: white;
+        }
+        .footer a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 20px;
+        }
+        .dark-mode .footer a {
+            color: #1da1f2;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-switch" onclick="toggleDarkMode()">Toggle</button>
+    <div class="container">
+        <div class="section profile-container">
+            <div class="profile-image">
+                <img src="adi.jpg">
+            </div>
+            <h2>D Aditya Varma</h2>
+        </div>
+        <h2>About Me</h2>
+<div class="section">
+    <ul>
+        <li>Passionate Computer Science student</li>
+        <li>Keen interest in web development and programming</li>
+        <li>Love exploring new technologies and working on innovative projects</li>
+    </ul>
+</div>
+
+<h2>Education</h2>
+<div class="section">
+    <ul>
+        <li><strong>Malla Reddy College of Engineering, Hyderabad</strong> - B.Tech CSE (Current)</li>
+        <li><strong>Sri Chaitanya Junior College</strong> - 8.2 GPA</li>
+        <li><strong>Sri Chaitanya School</strong> - 10 GPA</li>
+    </ul>
+</div>
+
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skills-box">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Java</li>
+                  
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>Angular</li>
+                    <li>React</li>
+                    <li>HTML, CSS, JavaScript</li>
+                </ul>
+            </div>
+            <div class="skills-box">
+                <h3>Non-Technical Skills</h3>
+                <ul>
+                    <li>Cricket</li>
+                    <li>Badminton</li>
+                    <li>Volleyball</li>
+                </ul>
+            </div>
+        </div>
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="projects-box">
+                <ul>
+                    <li><strong>Sports Pulse</strong> - A website for registering sports online (React, MongoDB)</li>
+                    <li><strong>Task Manager</strong> - A to-do list web app with user authentication (MERN Stack)</li>
+                    <li><strong>Portfolio Website</strong> - A personal portfolio showcasing skills and projects (HTML, CSS, JS)</li>
+                </ul>
+            </div>
+        </div>
+        <h2>Future Plans</h2>
+        <div class="projects-container">
+            <div class="projects-box">
+                <ul>
+                    <li><strong>Full-Stack Developer</strong> - Master front-end & back-end development.</li>
+                    <li><strong>Industry Contribution</strong> - Build and contribute to innovative applications.</li>
+                    <li><strong>Collaboration</strong> - Work with cutting-edge technologies and professionals.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Connect with me:</p>
+        <!--<a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>-->
+        <h6>instagram: @scar_1905</h6>
+    </div> 
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            
+        }
+    </script>
+</body>
+</html>
